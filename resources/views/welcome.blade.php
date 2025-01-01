@@ -909,6 +909,7 @@
 
 <body>
     <livewire:header />
+    <livewire:hero-section />
 </body>
 
 </html>
