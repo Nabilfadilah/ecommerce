@@ -25,7 +25,7 @@
 
             {{-- button add  --}}
             <div class="px-3 py-2">
-                <a href="#"
+                <a href="{{ auth()->check() ? '/add/to/cart' : '/auth/login' }}"
                     class="flex items-center justify-center gap-2 w-full text-center rounded bg-teal-900 hover:bg-teal-800 text-white px-12 py-2 text-sm font-medium focus:outline-none focus:ring active:bg-teal-700 sm:w-auto">
                     <i class="fa fa-cart-plus text-white"></i> <!-- Ikon cart -->
                     Add to cart
