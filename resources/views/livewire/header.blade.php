@@ -2,7 +2,7 @@
     {{-- Nothing in the world is as soft and yielding as water. --}}
     <header class="bg-white shadow-2xl">
         <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-            <a class="block text-teal-600" href="#">
+            <a class="block text-teal-600" href="/">
                 <span class="sr-only">Home</span>
                 <svg class="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -14,6 +14,10 @@
             <div class="flex flex-1 items-center justify-end md:justify-between">
                 <nav aria-label="Global" class="hidden md:block">
                     <ul class="flex items-center gap-6 text-sm">
+                        <li>
+                            <a class="text-gray-500 transition hover:text-gray-500/75" href="/"> Home </a>
+                        </li>
+
                         <li>
                             <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Explore More </a>
                         </li>
