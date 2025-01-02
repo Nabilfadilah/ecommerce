@@ -34,10 +34,25 @@
 
                 <div class="flex items-center gap-4">
                     <div class="sm:flex sm:gap-4">
-                        <a class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
-                            href="#">
-                            Get Started
-                        </a>
+
+                        {{-- authentikasi ketika sukses login, button akan hilang --}}
+                        @if (auth()->check())
+                            <a href="/cart">
+                                <i class="fa fa-cart-arrow-down"></i> <!-- Ikon cart -->
+                            </a>
+                            {{-- <a href="/auth/login">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            </a> --}}
+                            <a href="/auth/logout">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            </a>
+                        @else
+                            <a class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
+                                href="/auth/login">
+                                Get Started
+                            </a>
+                        @endif
+
                     </div>
 
                     <button
