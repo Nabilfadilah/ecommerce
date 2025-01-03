@@ -1,3 +1,3 @@
 <div>
-    <h1>Dashboard Admin</h1>
+    <livewire:bread-crumb :url="$currentUrl" />
 </div>
