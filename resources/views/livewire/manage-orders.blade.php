@@ -1,3 +1,3 @@
 <div>
-    Manage Orders
+    <livewire:bread-crumb :url="$currentUrl" />
 </div>
