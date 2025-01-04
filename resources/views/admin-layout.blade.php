@@ -109,6 +109,13 @@
                                 Orders
                             </a>
                         </li>
+                        <li><a wire:navigate
+                                class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm {{ Request::is('admin/categories') ? 'bg-amber-900' : '' }} text-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 dark:text-neutral-200 dark:hover:text-neutral-300"
+                                href="/admin/categories">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                Categories
+                            </a>
+                        </li>
 
                         <li>
                             <a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm {{ Request::is('admin/logout') ? 'bg-amber-900' : '' }} text-gray-200 rounded-lg dark:hover:bg-neutral-700 dark:text-neutral-300 dark:hover:text-neutral-300"
