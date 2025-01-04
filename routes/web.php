@@ -25,4 +25,5 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin/products/add', AddProductForm::class);
     Route::get('/admin/categories', ManageCategories::class);
     Route::get('/admin/categories/add', AddCategory::class);
+    Route::get('/admin/product/edit/{id}', EditProduct::class);
 });
