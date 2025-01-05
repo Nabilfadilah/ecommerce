@@ -25,6 +25,8 @@ Route::get('/all/products', AllProduct::class);
 Route::get('/about', AboutUs::class);
 Route::get('/contacts', Contacts::class);
 
+// cart shopping product
+Route::get('/shopping-cart', ShoppingCartComponent::class)->name('shopping-cart');
 
 // admin
 Route::group(['middleware' => 'admin'], function () {
