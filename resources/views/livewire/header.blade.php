@@ -15,44 +15,53 @@
                 <nav aria-label="Global" class="hidden md:block">
                     <ul class="flex items-center gap-6 text-sm">
                         <li>
-                            <a class="text-gray-500 transition hover:text-gray-500/75" href="/"> Home </a>
+                            {{-- <a class="text-gray-500 transition hover:text-gray-500/75" href="/"> Home </a> --}}
+                            <a class="text-gray-500 {{ Request::is('/') ? 'text-gray-700 font-bold' : '' }} transition hover:text-gray-500/75"
+                                wire:navigate href="/"> Home</a>
                         </li>
 
                         <li>
-                            <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Explore More </a>
+                            {{-- <a class="text-gray-500 transition hover:text-gray-500/75" href="/all/products"> Explore
+                                More
+                            </a> --}}
+                            <a class="text-gray-500 {{ Request::is('all/products') ? 'text-gray-700 font-bold' : '' }} transition hover:text-gray-500/75"
+                                wire:navigate href="/all/products"> Explore More</a>
                         </li>
 
                         <li>
-                            <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> About </a>
+                            {{-- <a class="text-gray-500 transition hover:text-gray-500/75" href="/about"> About </a> --}}
+                            <a class="text-gray-500 {{ Request::is('about') ? 'text-gray-700 font-bold' : '' }} transition hover:text-gray-500/75"
+                                wire:navigate href="/about"> About </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Contacts </a>
+                            {{-- <a class="text-gray-500 transition hover:text-gray-500/75" href="/contacts"> Contacts </a> --}}
+                            <a class="text-gray-500 {{ Request::is('contacts') ? 'text-gray-700 font-bold' : '' }} transition hover:text-gray-500/75"
+                                wire:navigate href="/contacts"> Contacts </a>
                         </li>
                     </ul>
                 </nav>
 
                 <div class="flex items-center gap-4">
-                    <div class="sm:flex sm:gap-4">
-
+                    <div class="sm:flex sm:gap-6">
                         {{-- authentikasi ketika sukses login, button akan hilang --}}
                         @if (auth()->check())
-                            <a href="/cart">
+                            <livewire:shopping-cart-icon />
+                            {{-- <a href="/shopping-cart">
                                 <i class="fa fa-cart-arrow-down"></i> <!-- Ikon cart -->
-                            </a>
-                            {{-- <a href="/auth/login">
-                                <i class="fa fa-sign-in" aria-hidden="true"></i>
                             </a> --}}
-                            <a href="/auth/logout">
-                                <i class="fa fa-sign-out" aria-hidden="true"></i>
-                            </a>
+
+                            <div class="border border-collapse border-red-500 rounded-lg px-1">
+                                <a href="/auth/logout">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         @else
                             <a class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
                                 href="/auth/login">
                                 Get Started
                             </a>
                         @endif
-
                     </div>
 
                     <button
