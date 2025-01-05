@@ -23,7 +23,7 @@
 
             {{-- button add  --}}
             @if (auth()->check())
-                <a wire:click.prevent="addToCart({{ $product->id }})" href="/add/to/cart">
+                <a wire:click.prevent="addToCart({{ $product->id }})" href="#">
                     <div
                         class="flex items-center justify-center gap-2 w-full text-center rounded bg-teal-900 hover:bg-teal-800 text-white px-12 py-2 text-sm font-medium focus:outline-none focus:ring active:bg-teal-700 sm:w-auto">
                         <div wire:loading
