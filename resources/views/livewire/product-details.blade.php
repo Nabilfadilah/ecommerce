@@ -13,7 +13,7 @@
             </div>
 
             <div class="px-3 py-2">
-                <a href="/add/to/cart"
+                <a wire:click.prevent="addToCart({{ $product->id }})" href="#"
                     class="flex items-center justify-center gap-2 w-full text-center rounded bg-teal-900 hover:bg-teal-800 text-white px-12 py-2 text-sm font-medium focus:outline-none focus:ring active:bg-teal-700 sm:w-auto">
                     <i class="fa fa-cart-plus text-white"></i> <!-- Ikon cart -->
                     Add to cart
