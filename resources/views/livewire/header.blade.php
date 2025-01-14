@@ -51,9 +51,11 @@
                                 <i class="fa fa-cart-arrow-down"></i> <!-- Ikon cart -->
                             </a> --}}
 
-                            <div class="border border-collapse border-red-500 rounded-lg px-1">
+                            <div
+                                class="border border-collapse border-red-900 rounded-lg px-1 hover:bg-red-900 hover:text-white">
                                 <a href="/auth/logout">
                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Logout
                                 </a>
                             </div>
                         @else
