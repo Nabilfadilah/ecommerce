@@ -1,4 +1,4 @@
-<div class="bg-gray-100 shadow-sm rounded-md hover:border border-teal-900 p-1">
+<div class="bg-gray-100 rounded-md hover:border border-teal-900 p-1 shadow-md shadow-gray-500">
 
     <a href="/product/{{ $product->id }}/details">
 
