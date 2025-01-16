@@ -10,7 +10,7 @@
                     class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200 dark:border-neutral-700 dark:first:border-transparent">
                     <div class="sm:col-span-12">
                         <h2 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                            Edit Product Details
+                            Edit Detail Produk
                         </h2>
                     </div>
 
@@ -18,7 +18,7 @@
                     <div class="sm:col-span-3">
                         <label for="af-submit-application-full-name"
                             class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
-                            Product name
+                            Nama Produk
                         </label>
                     </div>
 
@@ -36,7 +36,7 @@
                     <div class="sm:col-span-3">
                         <label for="af-submit-application-email"
                             class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
-                            Price
+                            Harga
                         </label>
                     </div>
 
@@ -53,7 +53,7 @@
                     <div class="sm:col-span-3">
                         <label for="af-submit-application-email"
                             class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
-                            Category
+                            Kategory
                         </label>
                     </div>
 
@@ -81,7 +81,7 @@
                     class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200 dark:border-neutral-700 dark:first:border-transparent">
                     <div class="sm:col-span-12">
                         <h2 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                            More Details
+                            Detail lainnya
                         </h2>
                     </div>
 
@@ -107,7 +107,7 @@
                     <div class="sm:col-span-3">
                         <label for="af-submit-application-resume-cv"
                             class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
-                            Product Image
+                            Produk Image
                         </label>
                     </div>
 
@@ -142,7 +142,7 @@
                         <div class="inline-block">
                             <label for="af-submit-application-bio"
                                 class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
-                                Product description
+                                Deskripsi Produk
                             </label>
                         </div>
                     </div>

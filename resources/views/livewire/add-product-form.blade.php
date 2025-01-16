@@ -10,7 +10,7 @@
                     class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200 dark:border-neutral-700 dark:first:border-transparent">
                     <div class="sm:col-span-12">
                         <h2 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                            Add New Product
+                            Tambah Produk Baru
                         </h2>
                     </div>
 
@@ -18,14 +18,15 @@
                     <div class="sm:col-span-3">
                         <label for="af-submit-application-full-name"
                             class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
-                            Product name
+                            Nama produk
                         </label>
                     </div>
                     <!-- End Col -->
 
                     <div class="sm:col-span-9">
                         <div>
-                            <input type="text" wire:model="product_name" id="af-submit-application-full-name"
+                            <input placeholder="Enter Nama produk" type="text" wire:model="product_name"
+                                id="af-submit-application-full-name"
                                 class="py-2 px-3 pe-11 block w-full border border-white shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
                             @error('product_name')
                                 <span class="text-red-500">{{ $message }}</span>
@@ -35,25 +36,44 @@
 
                     <!-- price -->
                     <div class="sm:col-span-3">
-                        <label for="af-submit-application-email"
+                        <label for="product_price"
                             class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
-                            Price
+                            Harga
                         </label>
                     </div>
 
                     <div class="sm:col-span-9">
-                        <input wire:model="product_price" id="af-submit-application-email" type="number" min="1"
+                        <input placeholder="0" wire:model="product_price" id="product_price" type="text"
+                            oninput="this.value = formatRupiah(this.value)"
                             class="py-2 px-3 pe-11 block w-full border border-white shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
                         @error('product_price')
                             <span class="text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
 
+                    <script>
+                        function formatRupiah(value) {
+                            const numberString = value.replace(/[^,\d]/g, "").toString();
+                            const split = numberString.split(",");
+                            const sisa = split[0].length % 3;
+                            let rupiah = split[0].substr(0, sisa);
+                            const ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+                            if (ribuan) {
+                                const separator = sisa ? "." : "";
+                                rupiah += separator + ribuan.join(".");
+                            }
+
+                            return split[1] !== undefined ? rupiah + "," + split[1] : rupiah;
+                        }
+                    </script>
+
+
                     <!-- category -->
                     <div class="sm:col-span-3">
                         <label for="af-submit-application-email"
                             class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
-                            Category
+                            Kategori
                         </label>
                     </div>
 
@@ -78,7 +98,7 @@
                     class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200 dark:border-neutral-700 dark:first:border-transparent">
                     <div class="sm:col-span-12">
                         <h2 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                            More Details
+                            Lebih Detail
                         </h2>
                     </div>
 
@@ -98,7 +118,7 @@
                     <div class="sm:col-span-3">
                         <label for="af-submit-application-resume-cv"
                             class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
-                            Product Image
+                            Gambar Produk
                         </label>
                     </div>
 
@@ -134,7 +154,7 @@
                         <div class="inline-block">
                             <label for="af-submit-application-bio"
                                 class="inline-block text-sm font-medium text-gray-500 mt-2.5 dark:text-neutral-500">
-                                Product description
+                                Deskripsi Produk
                             </label>
                         </div>
                     </div>
@@ -142,7 +162,7 @@
                     <div class="sm:col-span-9">
                         <textarea wire:model="product_description" id="af-submit-application-bio"
                             class="py-2 px-3 block w-full border border-white rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                            rows="6" placeholder="Add a product description here!"></textarea>
+                            rows="6" placeholder="Tambahkan deskripsi produk di sini!"></textarea>
                         @error('product_description')
                             <span class="text-red-500">{{ $message }}</span>
                         @enderror
