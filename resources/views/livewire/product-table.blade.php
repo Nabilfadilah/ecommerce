@@ -13,10 +13,10 @@
                             class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-neutral-700">
                             <div>
                                 <h2 class="text-xl font-semibold text-gray-800 dark:text-neutral-200">
-                                    Product
+                                    Produk
                                 </h2>
                                 <p class="text-sm text-gray-600 dark:text-neutral-400">
-                                    Add Product, edit and more.
+                                    Menambah produk, edit, dan lainnya
                                 </p>
                             </div>
 
@@ -36,7 +36,7 @@
                                         <path d="M5 12h14" />
                                         <path d="M12 5v14" />
                                     </svg>
-                                    Add Product
+                                    Tambah Product
                                 </a>
                             </div>
                         </div>
@@ -49,22 +49,22 @@
 
                                     @include('livewire.theaders.th', [
                                         'name' => 'name',
-                                        'columnName' => 'Product Name',
+                                        'columnName' => 'Nama Produk',
                                     ])
 
                                     @include('livewire.theaders.th', [
                                         'name' => 'description', //column name from db
-                                        'columnName' => 'Description', //display name
+                                        'columnName' => 'Deskripsi', //display name
                                     ])
 
                                     @include('livewire.theaders.th', [
                                         'name' => 'price', //column name from db
-                                        'columnName' => 'Price', //display name
+                                        'columnName' => 'Harga', //display name
                                     ])
 
                                     @include('livewire.theaders.th', [
                                         'name' => 'category_id', //column name from db
-                                        'columnName' => 'Category', //display name
+                                        'columnName' => 'Kategori', //display name
                                     ])
 
                                     @include('livewire.theaders.th', [
