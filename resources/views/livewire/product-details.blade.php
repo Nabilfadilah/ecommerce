@@ -9,7 +9,7 @@
                 <div class="bg-green-200 p-1 rounded-md">
                     <h2 class="text-sm px-1">{{ $product->category->name }}</h2>
                 </div>
-                <h2 class="text-sm font-medium">{{ $product->price }}</h2>
+                <h2 class="text-sm font-medium">{{ formatRupiah($product->price) }}</h2>
             </div>
 
             <div class="px-3 py-2">
@@ -24,7 +24,7 @@
 
     {{-- related product --}}
     <div class="my-5 px-20 pt-5">
-        <h2 class="text-2xl font-medium">Related Products</h2>
+        <h2 class="text-2xl font-medium mb-3">Product Terkait</h2>
         <livewire:product-listing :category_id="$product->category_id" :current_product_id="$product->id" />
     </div>
 </div>
