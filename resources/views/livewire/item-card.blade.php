@@ -1,4 +1,4 @@
-<div class="bg-gray-100 rounded-md hover:border border-teal-900 p-1 shadow-md shadow-gray-500">
+<div class="bg-gray-100 rounded-md hover:border border-teal-900 p-1 shadow-md shadow-gray-500 mb-5">
 
     <a href="/product/{{ $product->id }}/details">
 
@@ -18,7 +18,8 @@
                 <div class="bg-green-200 p-1 rounded-md">
                     <h2 class="text-sm px-1">{{ $product->category->name }}</h2>
                 </div>
-                <h2 class="text-sm font-medium">Rp. {{ $product->price }}</h2>
+                <h2 class="text-sm font-medium">{{ formatRupiah($product->price) }}</h2>
+                {{-- <h2 class="text-sm font-medium">Rp. {{ $product->price }}</h2> --}}
             </div>
 
             {{-- button add  --}}
