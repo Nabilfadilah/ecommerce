@@ -40,7 +40,7 @@ class ShoppingCartComponent extends Component
         // });
 
         $this->vat = $this->subtotal * 0.1; // Contoh PPN 10%.
-        $this->discount = 5; // menerapkan logika diskon
+        $this->discount = 5000; // menerapkan logika diskon 5k
         $this->total = $this->subtotal + $this->vat - $this->discount;
     }
 
